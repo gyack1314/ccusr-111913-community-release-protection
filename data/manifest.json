@@ -35,7 +35,7 @@
       },
       "path": "data/deposits.jsonl",
       "rows": 143,
-      "sha256": "811a7b652ac8999113e8eee1f14a296f317ba97bbea900e4917f3e764604e115"
+      "sha256": "7cb2649cbaaeb40e344bbe2cae7040b0596b4025e4d10461e6513e244bd45caa"
     },
     {
       "name": "requests",
@@ -105,7 +105,7 @@
       },
       "path": "data/corrections.jsonl",
       "rows": 1,
-      "sha256": "900f791eb63e7e68c15c5b718828d83d246b7e92a72d6fe13f18d4a9759fb14b"
+      "sha256": "0c8c85cb7898e39980ea4f2208567ff54e946e6c6104267d515dce5a0ac56ced"
     }
   ]
 }
