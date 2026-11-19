@@ -1,0 +1,3 @@
+{"id":"R1","audience":"public","month":"2026-09","community":null,"buildings":["B0","B1"],"categories":["paper","plastic"],"statistics":["participant_count","amount_sum"],"group_by":["building"]}
+{"id":"R2","audience":"public","month":"2026-09","community":null,"buildings":["B0","B1","B2"],"categories":["paper","plastic"],"statistics":["participant_count","amount_histogram"],"group_by":[]}
+{"id":"R3","audience":"partner","month":"2026-09","community":"C0","buildings":[],"categories":["paper"],"statistics":["amount_sum"],"group_by":[]}

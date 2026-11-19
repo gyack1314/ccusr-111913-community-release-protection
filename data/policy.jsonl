@@ -1,0 +1,1 @@
+{"id":"P1","min_households":5,"amount_width_floor_cents":100,"count_width_floor":1,"histogram_edges_cents":[0,100,300,1000,3001],"known_membership":true,"audiences":["public","partner"]}

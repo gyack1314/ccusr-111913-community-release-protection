@@ -1,0 +1,111 @@
+{
+  "project": "community-release-protection",
+  "version": "2026-09-synthetic-v1",
+  "synthetic": true,
+  "tables": [
+    {
+      "name": "households",
+      "key": "id",
+      "refs": {},
+      "fields": {
+        "id": "合成家庭身份",
+        "community": "公开社区归属",
+        "building": "公开楼栋归属",
+        "public_amount_upper_cents": "受众已知每户月金额上限",
+        "public_count_upper": "受众已知每户月次数上限"
+      },
+      "path": "data/households.jsonl",
+      "rows": 72,
+      "sha256": "7731e14854d738ea62c0b737d4cee26f8c8bdbe90e3999f5a845a55210344a17"
+    },
+    {
+      "name": "deposits",
+      "key": "id",
+      "refs": {
+        "household": "households"
+      },
+      "fields": {
+        "id": "事实身份",
+        "household": "家庭",
+        "month": "统计月份",
+        "category": "品类",
+        "cents": "返利分",
+        "session": "投放会话",
+        "complete": "该事实是否完成核对"
+      },
+      "path": "data/deposits.jsonl",
+      "rows": 143,
+      "sha256": "811a7b652ac8999113e8eee1f14a296f317ba97bbea900e4917f3e764604e115"
+    },
+    {
+      "name": "requests",
+      "key": "id",
+      "refs": {},
+      "fields": {
+        "id": "请求身份",
+        "audience": "受众知识共享组",
+        "month": "月份",
+        "community": "社区筛选，空表示全部",
+        "buildings": "楼栋集合，空列表表示不限",
+        "categories": "品类集合",
+        "statistics": "所需统计项",
+        "group_by": "分组字段"
+      },
+      "path": "data/requests.jsonl",
+      "rows": 3,
+      "sha256": "fab62e397ebd597bb7507990085cd7a5c4832f9cb6d8f43120e5938812e2bfee"
+    },
+    {
+      "name": "policy",
+      "key": "id",
+      "refs": {},
+      "fields": {
+        "id": "策略身份",
+        "min_households": "最小直接披露住户数",
+        "amount_width_floor_cents": "保护的单户金额可推断区间最小宽度",
+        "count_width_floor": "保护的单户参与指示区间最小宽度",
+        "histogram_edges_cents": "允许的月金额分箱",
+        "known_membership": "受众已知名册归属",
+        "audiences": "共享历史的受众组"
+      },
+      "path": "data/policy.jsonl",
+      "rows": 1,
+      "sha256": "cbacbe68dbc697bdedb2e465d9d0fe0463dc57f6dd6c9d9cefb03438fda582e4"
+    },
+    {
+      "name": "prior_releases",
+      "key": "id",
+      "refs": {},
+      "fields": {
+        "id": "历史投递身份",
+        "audience": "共享受众",
+        "households": "确切作用家庭集合",
+        "month": "月份",
+        "statistic": "统计事实类型",
+        "value": "实际已公布值或范围",
+        "delivered_at": "实际公开时点"
+      },
+      "path": "data/prior_releases.jsonl",
+      "rows": 1,
+      "sha256": "5f35f1be6c4111088021ed67500500dacccd1069d2866152a854c69c9838993c"
+    },
+    {
+      "name": "corrections",
+      "key": "id",
+      "refs": {
+        "deposit": "deposits",
+        "household": "households"
+      },
+      "fields": {
+        "id": "更正身份",
+        "deposit": "事实身份",
+        "known_at": "到达时间",
+        "household": "更正后的家庭",
+        "supersedes": "明确更正引用"
+      },
+      "path": "data/corrections.jsonl",
+      "rows": 1,
+      "sha256": "900f791eb63e7e68c15c5b718828d83d246b7e92a72d6fe13f18d4a9759fb14b"
+    }
+  ]
+}
